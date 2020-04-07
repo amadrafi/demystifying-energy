@@ -1,3 +1,3 @@
-# Demistifying-Energy
+# Demystifying-Energy
 
 Hi all, Welcome!
