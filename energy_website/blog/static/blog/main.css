@@ -1,3 +1,4 @@
+
 body {
  font-family: 'Lora', serif;
  background: #fafafa;
@@ -131,4 +132,10 @@ a.article-title:hover {
   font-family: "Playfair Display";
   font-size: 28px;
   letter-spacing: 1.5px;
+}
+#parallax-about {
+  height: 50vh;
+}
+#jumbotron-about{
+  margin-top: 170px;
 }
