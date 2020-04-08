@@ -5,6 +5,7 @@ class Article(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
     content = models.TextField()
+    summary = models.CharField(max_length=100)
     datePosted = models.DateTimeField(auto_now_add=True)
     author = models.TextField()
 
