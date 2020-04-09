@@ -1,19 +1,33 @@
-{% extends "blog/base.html" %}   
+{% extends "blog/base.html" %}
 {% block content %}
 
-    {% for post in posts %}
-    <article class="media content-section">
-        <div class="media-body">
-          <div class="article-metadata">
-            <a class="mr-2" href="#">{{ post.author }}</a>
-            <small class="text-muted">{{ post.date_posted }}</small>
-          </div>
+<div class="parallax-container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 lora" id="jumbotron-title">WELCOME</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, assumenda?</p>
+    </div>
+  </div>
+  <div class="parallax"><img src="https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"></div>
+</div>
 
-          <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
-          
-          <p class="article-content">{{ post.content }}</p>
-        </div>
-      </article>
-    {% endfor %}
+<main role="main" class="container content">
+<div class="row">
+    <div class="col s8">
+      {% for article in articles %}
+      <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ article.author }}</a>
+              <small class="text-muted">{{ article.datePosted }}</small>
+            </div>
+
+            <h2><a class="article-title" href="#">{{ article.title }}</a></h2>
+
+            <p class="article-content">{{ article.snippet}}...</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
 
 {% endblock content %}
