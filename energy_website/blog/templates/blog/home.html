@@ -15,18 +15,24 @@
 <div class="row">
     <div class="col s8">
       {% for article in articles %}
-      <article class="media content-section">
-          <div class="media-body">
-            <div class="article-metadata">
-              <a class="mr-2" href="#">{{ article.author }}</a>
-              <small class="text-muted">{{ article.datePosted }}</small>
+        {% if article.status%}
+        <article class="media content-section">
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" href="#">{{ article.author }}</a>
+                <small class="text-muted">{{ article.datePosted }}</small>
+              </div>
+
+<<<<<<< HEAD
+            <h2><a class="article-title" href="{% url 'blog:link' slug=article.slug %}">{{ article.title }}</a></h2>
+=======
+              <h2><a class="article-title" href="#">{{ article.title }}</a></h2>
+>>>>>>> eda2c0938a8b99f4fd8bad18ae84d048888ffb20
+
+              <p class="article-content">{{ article.snippet}}...</p>
             </div>
-
-            <h2><a class="article-title" href="#">{{ article.title }}</a></h2>
-
-            <p class="article-content">{{ article.snippet}}...</p>
-          </div>
-        </article>
+          </article>
+        {% endif %}
       {% endfor %}
     </div>
 
