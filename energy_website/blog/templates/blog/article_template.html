@@ -4,6 +4,7 @@
   <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{% static 'blog/articles.css' %}">
@@ -24,7 +25,27 @@
         </ul>
       </div>
     </nav>
-    <h1> {{ articles.title }}</h1>
+    <div class="article-container">
+      <div class="row">
+        <div class="col s9">
+          <div class="media-body">
+            <article class="media content-section">
+              <div class="article-metadata">
+                <h1>{{articles.title}}</h1>
+                <h6>By <a class="mr-2" href="#">{{articles.author}}</a> <small class="text-muted">{{articles.datePosted}}</small></h6>
+              </div>
+              <p>{{articles.content}}</p>
+            </article>
+          </div>
+        </div>
+        <div class="col s3">
+          <h5>Related Articles</h5>
+          <div class="content-section">
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
