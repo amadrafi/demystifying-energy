@@ -1,0 +1,49 @@
+.article-metadata {
+    padding-bottom: 5px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+h5 {
+    font-family:'Montserrat', sans-serif;
+    border-bottom: 2px;
+    border-width: 1px;
+}
+body {
+    font-family: 'Lora', serif;
+    background: #fafafa;
+    color: #333333;
+}
+nav .brand-logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20pt;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #2D3047;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    font-size:3.7rem;
+    margin:1.0rem 0 0rem 0
+}
+nav {
+    background-color:#e9e8e4;
+    color:#333;
+    width:100%;
+}
+nav ul a{
+    color:#757575
+}
+.mr-2{
+    margin-right: 10px;
+}
+.article-container{
+    margin:30px 10px 30px 10px;
+}
