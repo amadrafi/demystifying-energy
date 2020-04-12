@@ -29,14 +29,42 @@
     <div class="article-container">
       <div class="row">
         <div class="col s9">
-          <div class="media-body">
-            <article class="media content-section">
-              <div class="article-metadata">
-                <h1>{{articles.title}}</h1>
-                <h6>By <a class="mr-2" href="#">{{articles.author}}</a> <small class="text-muted">{{articles.datePosted}}</small></h6>
+          <article class="content-section">
+            <div class="article-metadata">
+              <h1>{{articles.title}}</h1>
+              <h6>By <a class="mr-2" href="#">{{articles.author}}</a>
+                <small class="text-muted">{{articles.datePosted}}</small></h6>
+            </div>
+            <p>{{articles.content}}</p>
+          </article>
+          <div class="content-section">
+            <div class="card-body">
+              <!-- comments -->
+              <h4>{{ comments.count }} Comment(s)</h4>
+              {% for comment in comments %}
+                <div class="comments">
+                  <h6><span class="name">{{ comment.name }}</span>
+                    <small class="text-muted">{{ comment.created_on }}</small></h6>
+                  {{ comment.body | linebreaks }}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="card-body">
+              {% if new_comment %}
+              <div class="alert alert-success" role="alert">
+                Your comment is awaiting moderation
               </div>
-              <p>{{articles.content}}</p>
-            </article>
+              {% else %}
+              <h4>Leave a comment</h4>
+              <form method="post" style="margin-top: 1.3em;">
+                {{ comment_form.as_p }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+              </form>
+              {% endif %}
+            </div>
           </div>
         </div>
         <div class="col s3">
@@ -44,42 +72,9 @@
           <div class="content-section">
           </div>
         </div>
-        <div class="col-md-8 card mb-4  mt-3 ">
-      <div class="card-body">
-        <!-- comments -->
-        <h2>{{ comments.count }} comments</h2>
+      </div>
+    </div>
 
-        {% for comment in comments %}
-        <div class="comments" style="padding: 10px;">
-          <p class="font-weight-bold">
-            {{ comment.name }}
-            <span class=" text-muted font-weight-normal">
-              {{ comment.created_on }}
-            </span>
-          </p>
-          {{ comment.body | linebreaks }}
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="col-md-8 card mb-4  mt-3 ">
-      <div class="card-body">
-        {% if new_comment %}
-        <div class="alert alert-success" role="alert">
-          Your comment is awaiting moderation
-        </div>
-        {% else %}
-        <h3>Leave a comment</h3>
-        <form method="post" style="margin-top: 1.3em;">
-          {{ comment_form.as_p }}
-          {% csrf_token %}
-          <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
-        </form>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-</div>
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
