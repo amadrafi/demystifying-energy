@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
 )
+CKEDITOR_CONFIGS = { 'default': 
+                         { 'toolbar': 'Custom', 'height': 500, 'toolbar_Custom': 
+                             [ 
+                                 ['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'SpellChecker', 'Undo', 'Redo'], 
+                                 ['Link', 'Unlink', 'Anchor'], 
+                                 ['Image', 'Flash', 'Table', 'HorizontalRule', 'Embed', 'Iframe'], 
+                                 ['TextColor', 'BGColor'], 
+                                 ['Smiley', 'SpecialChar', 'Mathjax'], 
+                                 ['Source'], 
+                             ], 
+                             'extraPlugins': 'embed,iframe,mathjax'
+                           }
+}
