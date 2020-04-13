@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 STATUS = (
     (0,"Draft"),
@@ -22,7 +22,7 @@ class Article(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
-    content = models.TextField()
+    content = RichTextField(config_name = 'default')
     summary = models.CharField(max_length=100)
     datePosted = models.DateTimeField(auto_now_add=True)
     author = models.TextField()

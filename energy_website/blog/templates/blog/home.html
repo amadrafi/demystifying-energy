@@ -23,7 +23,7 @@
                 <small class="text-muted">{{ article.datePosted }}</small>
               </div>
               <h2><a class="article-title" href="{% url 'blog:link' slug=article.slug %}">{{ article.title }}</a></h2>
-              <p class="article-content">{{ article.snippet}}...</p>
+              <p class="article-content">{{ article.snippet |safe}}...</p>
             </div>
           </article>
         {% endif %}

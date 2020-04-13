@@ -35,7 +35,7 @@
               <h6>By <a class="mr-2" href="#">{{articles.author}}</a>
                 <small class="text-muted">{{articles.datePosted}}</small></h6>
             </div>
-            <p>{{articles.content}}</p>
+            <p>{{articles.content | safe}}</p>
           </article>
           <div class="content-section">
             <div class="card-body">
