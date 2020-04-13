@@ -10,10 +10,8 @@
     border-radius: 3px;
     margin-bottom: 20px;
 }
-h5 {
+h1, h2, h3, h4, h5 {
     font-family:'Montserrat', sans-serif;
-    border-bottom: 2px;
-    border-width: 1px;
 }
 body {
     font-family: 'Lora', serif;
@@ -28,10 +26,9 @@ nav .brand-logo{
     color: #2D3047;
 }
 h1{
-    font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
     font-size:3.7rem;
-    margin:1.0rem 0 0rem 0
+    margin:1.0rem 0 0rem 0;
 }
 nav {
     background-color:#e9e8e4;
@@ -46,4 +43,10 @@ nav ul a{
 }
 .article-container{
     margin-top: 9vh;
+}
+.name{
+    color:#039be5;
+}
+h4{
+    margin:1.0rem 0 1.6rem 0;
 }
