@@ -76,4 +76,3 @@ webencodings==0.5.1
 whitenoise==5.0.1
 widgetsnbextension==3.5.1
 wrapt==1.11.2
-wsgiref==0.1.2
