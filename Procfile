@@ -1,1 +1,0 @@
-web: gunicorn energy_website.energy_website.wsgi 
