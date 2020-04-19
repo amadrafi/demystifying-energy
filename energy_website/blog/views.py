@@ -1,8 +1,17 @@
 from django.http import HttpResponse
-from .models import Article, Comment
+from .models import Article, Comment, Category
 from .forms import CommentForm
 from django.shortcuts import render, get_object_or_404
 # Create your views here.
+
+def list_by_category(request, category_slug):
+    categories = Category.objects.all()
+    articles = Article.objects.all()
+    if category_slug:
+        category = get_object_or_404(Category, slug=category_slug)
+        articles = articles.filter(category=category)
+    context = {'categories': categories, 'articles': articles, 'category': category}
+    return render(request, 'blog/categories.html', context)
 
 def home(request):
     articles = Article.objects.all()

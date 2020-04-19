@@ -34,7 +34,9 @@
             <div class="article-metadata">
               <h1>{{articles.title}}</h1>
               <h6>By <a class="mr-2" href="#">{{articles.author}}</a>
-                <small class="text-muted">{{articles.datePosted}}</small></h6>
+                <small class="text-muted">{{articles.datePosted}}</small>
+                Category: <a class ="mr-2" href="{{articles.category.get_absolute_url}}"> {{ articles.category }}</a>
+              </h6>
             </div>
             <p>{{articles.content | safe}}</p>
           </article>

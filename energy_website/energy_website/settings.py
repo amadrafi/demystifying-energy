@@ -24,7 +24,7 @@ SECRET_KEY = 'w*5b(4f^pr(m7q@au79f5yvmbsoiflx(2^jtgx0aui-6hud4mp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['demystifyingenergy.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['demystifyingenergy.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kuala_Lumpur'
 
 USE_I18N = True
 

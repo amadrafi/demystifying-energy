@@ -8,4 +8,5 @@ urlpatterns = [
     path('', views.home, name='blog-home'),
     path('about/', views.about, name='blog-about'),
     url(r'^(?P<slug>[\w-]+)/$', views.article_detail, name='link'),
+    url(r'^category/(?P<category_slug>[-\w]+)/$', views.list_by_category, name='list_by_category'),
 ]
