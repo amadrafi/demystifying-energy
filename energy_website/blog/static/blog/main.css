@@ -73,6 +73,9 @@ nav .brand-logo{
 .parallax-container{
   height: 100vh;
 }
+.parallax_contanerx{
+  height: 20vh;
+}
 .article-title {
   color: #444444;
 }

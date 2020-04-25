@@ -1,10 +1,12 @@
 {% extends "blog/base.html" %}
 {% block content %}
+<div class="container" style="padding-top:20vh">
+  <h1 class="display-4 lora" id="jumbotron-title">{{category.name}}</h1>
+</div>
 
 <main role="main" class="container content">
 <div class="row">
     <div class="col s8">
-      <h2>{{  category.name  }}</h2>
       {% for article in articles %}
         {% if article.status%}
         <article class="media content-section">
@@ -12,7 +14,7 @@
               <div class="article-metadata">
                 <a class="mr-2" href="#">{{ article.author }}</a>
                 <small class="text-muted">{{ article.datePosted }}</small>
-                <a class="mr-2" href="{{articles.category.get_absolute_url}}">{{article.category}}</a>
+                <a class="mr-2" href="{{article.category.get_absolute_url}}">{{article.category}}</a>
               </div>
               <h2><a class="article-title" href="{% url 'blog:link' slug=article.slug %}">{{ article.title }}</a></h2>
               <p class="article-content">{{ article.summary}}</p>
@@ -23,3 +25,4 @@
     </div>
 
 {% endblock content %}
+
