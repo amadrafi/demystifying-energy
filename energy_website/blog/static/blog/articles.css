@@ -5,11 +5,12 @@
 }
 .content-section {
     background: #ffffff;
-    padding: 10px 20px 10px 40px;
+    padding: 5px 20px 5px 40px;
     border: 1px solid #dddddd;
     border-radius: 3px;
     margin-bottom: 20px;
 }
+
 h1, h2, h3, h4, h5 {
     font-family:'Montserrat', sans-serif;
 }
@@ -20,7 +21,7 @@ body {
 }
 nav .brand-logo{
     font-family: 'Montserrat', sans-serif;
-    font-size: 15pt;
+    font-size: 2.5vw;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #2D3047;
@@ -34,6 +35,7 @@ nav {
     background-color:#e9e8e4;
     color:#333;
     width:100%;
+    line-height: normal !important;
 }
 nav ul a{
     color:#757575
@@ -50,3 +52,4 @@ nav ul a{
 h4{
     margin:1.0rem 0 1.6rem 0;
 }
+

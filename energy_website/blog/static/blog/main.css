@@ -27,13 +27,6 @@ h2{
 ul {
   margin: 0;
 }
-nav {
-  background-color: transparent;
-  position: absolute;
-  border: 0;
-  padding-top: 20px;
-  z-index: 10;
-}
 
 .bg-steel {
   background-color: #2D3047;
@@ -42,6 +35,13 @@ nav {
   color: #cbd5db;
 }
 
+nav {
+  background-color: transparent;
+  position: absolute;
+  border: 0;
+  padding-top: 20px;
+  z-index: 10;
+}
 .site-header .navbar-nav .nav-link:hover {
   color: #ffffff;
 }
@@ -57,7 +57,7 @@ nav ul a:hover{
 }
 nav .brand-logo{
   font-family: 'Montserrat', sans-serif;
-  font-size: 20pt;
+  font-size: 16pt;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #2D3047;
@@ -76,9 +76,33 @@ nav .brand-logo{
 .parallax_contanerx{
   height: 20vh;
 }
+
+@media screen and (max-width: 1000px) {
+  h1{
+    font-size: 7vmin;
+  }
+  h2{
+    font-size: 5vmin;
+  }
+  h3{
+    font-size: 3vmin;
+  }
+  li{
+    font-size: 1.5vmin;
+  }
+  p{
+    font-size: 2vmin;
+  }
+}
+
 .article-title {
   color: #444444;
 }
+
+.side-panel {
+  font-size: 3vw;
+}
+
 .jumbotron {
   margin-top: 45vh;
 }

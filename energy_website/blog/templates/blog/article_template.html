@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{% static 'blog/articles.css' %}">
 
+    
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -18,18 +19,27 @@
   </head>
   <body>
     <nav class="z-depth-0">
-      <div class="nav-wrapperc container">
+      <div class="nav-wrapper container">
         <a href="{% url 'blog:blog-home'%}" class="brand-logo lora">Demystifying Energy</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
         <ul class="right hide-on-med-and-down">
           <li><a href="{% url 'blog:blog-about'%}">About</a></li>
           <li><a href="#">Admin</a></li>
         </ul>
+
+        <ul id="nav-mobile" class="sidenav" >
+          <li><a href="{% url 'blog:blog-about' %}">About</a></li>
+          <li><a href="/admin">Admin</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons" style="color: #2D3047">menu</i></a>
       </div>
     </nav>
+
+  
+    
     <div class="article-container container">
       <div class="row">
-        <div class="col s9">
+        <div class="col s12">
           <article class="content-section">
             <div class="article-metadata">
               <h1>{{articles.title}}</h1>
@@ -69,18 +79,21 @@
               {% endif %}
             </div>
           </div>
-        </div>
-        <div class="col s3">
-          <h5>Related Articles</h5>
-          <div class="content-section">
+          <div class="col s12">
+            <h5>Related Articles</h5>
+            <div class="content-section">
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-
+    
     <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{% static 'blog/init.js' %}"></script>
+    <script src="{% static 'blog/materialize.js'%}"></script>
+    
   </body>
 </html>
 

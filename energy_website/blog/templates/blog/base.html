@@ -9,10 +9,15 @@
     <meta name="description" content="Energy Website Education">
     <meta name="keywords" content="Energy, Demystifying, JavaScript">
     <meta name="google-site-verification" content="O0B3rmBbDvazdYrhebmdtxrvQ_pJwDpsZp27vP4itgo" />
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+
+    <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{% static 'blog/main.css' %}">
 
@@ -25,17 +30,20 @@
 </head>
 <body>
     <nav class="z-depth-0">
-      <div class="nav-wrapperc container">
+      <div class="nav-wrapper container">
         <a href="{% url 'blog:blog-home'%}" class="brand-logo lora">Demystifying Energy</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons" style="color: #2D3047">menu</i></a>
+
+
         <ul class="right hide-on-med-and-down">
           <li><a href="{% url 'blog:blog-about'%}">About</a></li>
           <li><a href="#">Admin</a></li>
         </ul>
+
       </div>
     </nav>
-
-    <ul class="sidenav" id="mobile-demo">
+    <ul id="nav-mobile" class="sidenav" >
       <li><a href="{% url 'blog:blog-about' %}">About</a></li>
       <li><a href="/admin">Admin</a></li>
     </ul>
@@ -43,38 +51,28 @@
     {% block content %}
     {% endblock %}
 
-        <div class="col s4">
-            <div class="content-section">
-                <h3>Categories</h3>
-                <p class='text-muted'>
-                    <ul class="list-group">
-                        <li class="list-group-item list-group-item-light"><a href="/category/physics-concepts">Physics Concepts</a></li>
-                        <li class="list-group-item list-group-item-light"><a href="/category/generation">Generation</a></li>
-                        <li class="list-group-item list-group-item-light"><a href="/category/transmission">Transmission</a></li>
-                        <li class="list-group-item list-group-item-light"><a href="/category/consumption">Consumption & Usage</a></li>
-                        <li class="list-group-item list-group-item-light"><a href="/category/energy">Energy in Malaysia</a></li>
-                    </ul>
-                </p>
-            </div>
+    <div class="col s4">
+        <div class="content-section">
+            <h3 class="side-panel">Categories</h3>
+            <p class='text-muted'>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-light"><a href="/category/physics-concepts">Physics Concepts</a></li>
+                    <li class="list-group-item list-group-item-light"><a href="/category/generation">Generation</a></li>
+                    <li class="list-group-item list-group-item-light"><a href="/category/transmission">Transmission</a></li>
+                    <li class="list-group-item list-group-item-light"><a href="/category/consumption">Consumption & Usage</a></li>
+                    <li class="list-group-item list-group-item-light"><a href="/category/energy-malaysia">Energy in Malaysia</a></li>
+                </ul>
+            </p>
         </div>
-
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{% static 'blog/init.js' %}"></script>
+    <script src="{% static 'blog/materialize.js'%}"></script>
 </body>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.parallax');
-    var instances = M.Parallax.init(elems, options);
-  });
 
-  // Or with jQuery
 
-  $(document).ready(function(){
-    $('.parallax').parallax();
-  });
-</script>
+
 </html>
