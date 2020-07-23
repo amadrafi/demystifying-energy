@@ -42,6 +42,9 @@ class Article(models.Model):
 
     def snippet(self):
         return self.content[:100]
+    
+    def get_absolute_url(self):
+        return reverse('blog:link', args=[self.slug] )
 
 class Comment(models.Model):
     post = models.ForeignKey(Article,on_delete=models.CASCADE,related_name='comments', null=True)

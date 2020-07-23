@@ -18,7 +18,7 @@ def home(request):
     return render(request, 'blog/home.html', {'articles':articles})
 
 def about(request):
-    return render(request, 'blog/about.html',{'title': 'About'})
+    return render(request, 'blog/about.html',)
 
 def article_detail(request, slug):
     articles = get_object_or_404(Article, slug=slug)

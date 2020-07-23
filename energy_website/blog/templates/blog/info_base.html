@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
-    <meta name="description" content="Energy Website Education">
-    <meta name="keywords" content="Energy, Demystifying, JavaScript">
     <meta name="google-site-verification" content="O0B3rmBbDvazdYrhebmdtxrvQ_pJwDpsZp27vP4itgo" />
     
     <!-- Fonts -->
@@ -24,12 +22,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{% static 'blog/main.css' %}">
 
+    {% block head %} {% endblock %}
 
-    {% if title %}
-        <title>Demystifying Energy - {{title}}</title>
-    {% else %}
-        <title>Demystifying Energy</title>
-    {% endif %}
 </head>
 <body>
     <nav class="z-depth-0">
@@ -41,14 +35,13 @@
 
         <ul class="right hide-on-med-and-down">
           <li><a href="{% url 'blog:blog-about'%}">About</a></li>
-          <li><a href="/admin">Admin</a></li>
         </ul>
 
       </div>
     </nav>
     <ul id="nav-mobile" class="sidenav" >
+      <li><a href="{% url 'blog:blog-home' %}">Home</a></li>
       <li><a href="{% url 'blog:blog-about' %}">About</a></li>
-      <li><a href="/admin">Admin</a></li>
     </ul>
 
     {% block content %}

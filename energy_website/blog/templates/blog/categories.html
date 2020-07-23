@@ -1,4 +1,14 @@
 {% extends "blog/base.html" %}
+{% block head %}
+  <title>Learn {{category.name}} | Demystifying Energy</title>
+  <meta name="description" content="Learn about the {{category.name}} topic that is explained in a simple manner. No ads. For students, by students.">
+  <meta property="og:description" content="Learn about the {{category.name}} topic that is explained in a simple manner. No ads. For students, by students.">
+
+  <meta name="twitter:description" content="Learn about the {{category.name}} topic that is explained in a simple manner. No ads. For students, by students.">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Learn {{category.name}} | Demystifying Energy" />
+{% endblock %}
+
 {% block content %}
 <div class="container" style="padding-top:20vh">
   <h1 class="display-4 lora" id="jumbotron-title">{{category.name}}</h1>
