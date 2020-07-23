@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-from energy_website.secret_settings import *
 
 import os
 
@@ -23,7 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+SECRET_KEY = os.getenv('SECRET_KEY', 'Optional default value')
+
+DEBUG = False
 
 ALLOWED_HOSTS = ['demystifyingenergy.herokuapp.com', 'localhost']
 
