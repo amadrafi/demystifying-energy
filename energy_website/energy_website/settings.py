@@ -131,8 +131,8 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'blog/static')
 STATIC_URL = '/static/'
 
-# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CKEDITOR_CONFIGS = { 'default': 
                          { 'toolbar': 'Custom', 'height': 500, 'toolbar_Custom': 
