@@ -15,11 +15,11 @@ class StaticViewSitemap(Sitemap):
         return reverse(item)
 
 class ArticleSitemap(Sitemap):
-    changefreq = 'daily'
+    changefreq = 'weekly'
     priority = 0.6
 
     def items(self):
-        return Article.objects.all()
+        return Article.objects.filter(status=1)
 
 class CategorySitemap(Sitemap):
     changefreq = 'weekly'

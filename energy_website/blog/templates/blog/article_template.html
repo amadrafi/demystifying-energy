@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{% static 'blog/articles.css' %}">
 
+
+
   
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -33,22 +35,18 @@
       <div class="nav-wrapper container">
         <a href="{% url 'blog:blog-home'%}" class="brand-logo lora">Demystifying Energy</a>
 
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons" style="color: #2D3047">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="{% url 'blog:blog-about'%}">About</a></li>
-          <li><a href="#">Admin</a></li>
         </ul>
 
-        <ul id="nav-mobile" class="sidenav" >
-          <li><a href="{% url 'blog:blog-about' %}">About</a></li>
-          <li><a href="/admin">Admin</a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons" style="color: #2D3047">menu</i></a>
       </div>
     </nav>
-
-  
-    
-    <div class="article-container container">
+    <ul id="nav-mobile" class="sidenav" >
+      <li><a href="{% url 'blog:blog-home' %}">Home</a></li>
+      <li><a href="{% url 'blog:blog-about' %}">About</a></li>
+    </ul>
+    <div class="container article-container">
       <div class="row">
         <div class="col s12">
           <article class="content-section">

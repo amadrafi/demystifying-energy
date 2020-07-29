@@ -26,7 +26,7 @@ urlpatterns = [
         "robots.txt/",
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
     ),
-    url(r'^(?P<slug>[\w-]+)/$', views.article_detail, name='link'),
+    url(r'^article/(?P<slug>[\w-]+)/$', views.article_detail, name='link'),
     url(r'^category/(?P<category_slug>[-\w]+)/$', views.list_by_category, name='list_by_category'),
     
 ]
