@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta charset="UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="O0B3rmBbDvazdYrhebmdtxrvQ_pJwDpsZp27vP4itgo"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300"
+      rel="stylesheet"
+    />
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300"
+      rel="stylesheet"
+    />
+
+    <!--Website Icon-->
+    <link
+      rel="icon"
+      href="{% static 'blog/img/logo.png' %}"
+      type="image/png"
+      sizes="512x512"
+    />
+
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'blog/main.css' %}" />
+
+    <title>404 - Demystifying Energy</title>
+  </head>
+  <body>
+    <nav class="z-depth-0">
+      <div class="nav-wrapper container">
+        <a href="{% url 'blog:blog-home'%}" class="brand-logo lora"
+          >Demystifying Energy</a
+        >
+
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+          ><i class="material-icons" style="color: #2d3047;">menu</i></a
+        >
+
+        <ul class="right hide-on-med-and-down">
+          <li><a href="{% url 'blog:blog-about'%}">About</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul id="nav-mobile" class="sidenav">
+      <li><a href="{% url 'blog:blog-home' %}">Home</a></li>
+      <li><a href="{% url 'blog:blog-about' %}">About</a></li>
+    </ul>
+
+    <div class="parallax-container">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4 lora" id="jumbotron-title">404 Page Not Found</h1>
+          <p class="lead">Sorry, the page you are looking for does not exist.</p>
+        </div>
+        <img src="{% static 'blog/img/transparent.png' %}" class="background-image">
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{% static 'blog/init.js' %}"></script>
+    <script src="{% static 'blog/materialize.js'%}"></script>
+  </body>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+</html>
