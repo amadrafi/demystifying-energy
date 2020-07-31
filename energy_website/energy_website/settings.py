@@ -65,7 +65,7 @@ ROOT_URLCONF = 'energy_website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': ['energy_website/blog/templates', os.path.join(BASE_DIR, 'blog/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,8 +131,8 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'blog/static')
 STATIC_URL = '/static/'
 
-# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CKEDITOR_CONFIGS = { 'default': 
                          { 'toolbar': 'Custom', 'height': 500, 'toolbar_Custom': 
