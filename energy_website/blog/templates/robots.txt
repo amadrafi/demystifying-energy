@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow: /admin/
 
-Sitemap: https://demystifyingenergy.herokuapp.com/sitemap.xml
+Sitemap: http://demystifyingenergy.herokuapp.com/sitemap.xml
